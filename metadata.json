@@ -1,0 +1,6 @@
+{
+  "name": "Dev Enterprise",
+  "description": "Premium manufacturer and supplier of silver sheet coated disposable paper products, expanding from B2B wholesale into a premium B2C online retail experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

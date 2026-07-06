@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-brand-50: #f8fafc;
+  --color-brand-100: #f1f5f9;
+  --color-brand-200: #e2e8f0;
+  --color-brand-300: #cbd5e1;
+  --color-brand-400: #94a3b8;
+  --color-brand-500: #64748b;
+  --color-brand-600: #475569;
+  --color-brand-700: #334155;
+  --color-brand-800: #1e293b;
+  --color-brand-900: #0f172a;
+  --color-brand-950: #020617;
+
+  /* Custom Silver Colors */
+  --color-silver-50: #fafafb;
+  --color-silver-100: #f4f5f7;
+  --color-silver-200: #e2e4e9;
+  --color-silver-300: #cbd2db;
+  --color-silver-400: #98a5b6;
+  --color-silver-500: #66768a;
+  --color-silver-600: #4c5a6e;
+  --color-silver-700: #354152;
+  --color-silver-800: #1d2530;
+  --color-silver-900: #0f141b;
+  --color-silver-950: #07090d;
+
+  /* Accent Premium Colors */
+  --color-accent-charcoal: #121214;
+  --color-accent-platinum: #e2e8f0;
+}
+
+/* Custom Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F8F9FA; /* Premium off-white */
+    color: #1A1A1A; /* Deep editorial charcoal text */
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  /* Elegant focused states for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid #1A1A1A;
+    outline-offset: 4px;
+  }
+}
+
+/* Custom Utilities for Premium Silver Metallic Look - Adjusted for Editorial Light Theme */
+@utility bg-silver-metallic {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8f9fa 25%,
+    #e5e5e5 50%,
+    #f1f1f1 75%,
+    #ffffff 100%
+  );
+}
+
+@utility bg-silver-dark-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.02) 0%,
+    rgba(0, 0, 0, 0.01) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+@utility bg-silver-card-glow {
+  background: radial-gradient(
+    800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(0, 0, 0, 0.03),
+    transparent 40%
+  );
+}
+
+@utility border-silver-elegant {
+  border: 1px solid rgba(26, 26, 26, 0.08);
+}
+
+@utility border-silver-elegant-hover {
+  border: 1px solid rgba(26, 26, 26, 0.18);
+}
+
+@utility text-silver-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 50%, #7c7c7c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-silver-subtle-gradient {
+  background: linear-gradient(135deg, #4a4a4a 0%, #888888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@utility animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.03) 50%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* Custom scrollbar to keep it sleek and premium */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+  border-radius: 9999px;
+  border: 2px solid #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CCCCCC;
+}
